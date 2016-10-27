@@ -25,4 +25,4 @@ Services provided:
 On front-end side, I used jQuery, Handlebars and Bootstrap.
 
 Simple Tests are used as integration test and application tests.
-Those are mainly stubs for future real communication-flow test 
+Those are mainly stubs for future real communication-flow test
