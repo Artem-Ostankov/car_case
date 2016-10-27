@@ -1,12 +1,12 @@
 This is your new Play application
 =================================
 
-Is a prototype for test task
+This is a small web-service solution for required test task.
+Unfortunately, I didn't have enough time to finish all of the specified requirements.
+Though, I tried to do my best to provide a quick and solid solution that delivers main mechanics required from the task.
 
-From requested task I didn't unfortunately had time to finish all the required points.
-
-So the main entity Car is presented with the following required fields:
-uuid - actually sorm creates own Long typed primary key 'id' for H2 DB, though I had some problems to extract it,
+The main entity 'Car' is presented with the following required fields:
+uuid - actually sorm creates own Long typed primary key 'id' for H2 DB, though I had some problems with extracting it,
  so I've decided to create another field 'uuid' , which then is used as logic-wise id.
 title
 fuel
@@ -26,3 +26,4 @@ On front-end side, I used jQuery, Handlebars and Bootstrap.
 
 Simple Tests are used as integration test and application tests.
 Those are mainly stubs for future real communication-flow test
+
