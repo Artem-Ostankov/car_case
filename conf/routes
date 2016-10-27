@@ -4,18 +4,16 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
-# An example controller showing how to use dependency injection
-GET     /count                      controllers.CountController.count
-# An example controller showing how to write asynchronous code
-GET     /message                    controllers.AsyncController.message
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
-# POST    /person                     controllers.HomeController.addPerson
-
-# GET     /persons                    controllers.HomeController.getPersons
-
-POST    /car                        controllers.HomeController.addCar
+POST    /new_car                        controllers.HomeController.addCar
 
 GET     /cars                       controllers.HomeController.getCars
+
+GET     /new_car                    controllers.HomeController.newCar
+
+GET     /one_car                    controllers.HomeController.oneCar
+
+POST    /delete_car                 controllers.HomeController.deleteCar

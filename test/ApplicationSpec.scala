@@ -1,6 +1,8 @@
 import org.scalatestplus.play._
 import play.api.test._
 import play.api.test.Helpers._
+import play.api.Logger
+
 
 /**
  * Add your spec here.
@@ -24,17 +26,17 @@ class ApplicationSpec extends PlaySpec with OneAppPerTest {
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Hi Bro")
+      contentAsString(home) must include ("All Cars")
     }
 
   }
 
-  "CountController" should {
+  "Check index" should {
 
-    "return an increasing count" in {
-      contentAsString(route(app, FakeRequest(GET, "/count")).get) mustBe "0"
-      contentAsString(route(app, FakeRequest(GET, "/count")).get) mustBe "1"
-      contentAsString(route(app, FakeRequest(GET, "/count")).get) mustBe "2"
+    "return json list" in {
+      // quick stab, in reality a full communication flow check should be implemented
+      contentAsString(route(app, FakeRequest(GET, "/cars")).get) must startWith ("[")
+      contentAsString(route(app, FakeRequest(GET, "/cars")).get) must endWith ("]")
     }
 
   }

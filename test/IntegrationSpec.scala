@@ -14,7 +14,9 @@ class IntegrationSpec extends PlaySpec with OneServerPerTest with OneBrowserPerT
 
       go to ("http://localhost:" + port)
 
-      pageSource must include ("Hi Bro ")
+      pageSource must include ("All Cars")
+
+      // Potentially fill-in a new car and then then test appearence
     }
   }
 }
